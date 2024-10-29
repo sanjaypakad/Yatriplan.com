@@ -1,63 +1,88 @@
-/* General reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    font-family: Arial, sans-serif;
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: url('background-image.jpg') no-repeat center center/cover;
+    color: #fff;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background-image.jpg') center/cover;
-    color: #ffffff;
+    align-items: center;
+    overflow: hidden;
 }
-.container {
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+.container {
     max-width: 600px;
     padding: 20px;
 }
-h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+
+.title {
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
-p {
-    font-size: 1.2em;
-    margin: 10px 0 30px;
+
+.subtitle {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    font-style: italic;
+    color: #ffbb00;
 }
+
 .countdown {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
+    gap: 15px;
     font-size: 1.5em;
+    margin-bottom: 30px;
 }
+
 .countdown div {
     text-align: center;
 }
+
 .newsletter {
-    margin-top: 30px;
+    margin-top: 20px;
 }
+
 input[type="email"] {
-    padding: 10px;
+    padding: 12px;
     width: 70%;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
     margin-right: 10px;
+    font-size: 1em;
 }
+
 button {
-    padding: 10px 20px;
-    background-color: #ff6f61;
+    padding: 12px 20px;
+    border-radius: 25px;
     border: none;
-    color: white;
+    background-color: #ffbb00;
+    color: #000;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 4px;
+    font-size: 1em;
+    transition: background 0.3s;
 }
-footer {
-    margin-top: 40px;
-    font-size: 0.8em;
+
+button:hover {
+    background-color: #ff9900;
 }
- 
